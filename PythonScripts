@@ -1,0 +1,43 @@
+#!/usr/bin/python
+import os
+import sys
+import subprocess
+from subprocess import getoutput
+from subprocess import check_output
+
+os.environ['USER'] = "root"
+os.environ['COMMAND'] = "uptime"
+
+USER = os.getenv('USER')
+COMMAND = os.getenv('COMMAND')
+#
+with open('lists','r') as mahesh_file:
+    magesh_data=mahesh_file.readlines()
+    for hosts in magesh_data:
+        os.environ['HOST'] = hosts.strip()
+        HOST = os.getenv('HOST')
+        cmd = 'ssh ' + " " + USER + "@" + HOST + "-q" + " " + COMMAND
+        res = getoutput(cmd)
+        print(res
+[root@master-local ~]# cat shell_run_1.py 
+#!/usr/bin/python
+import os
+import sys
+import subprocess
+from subprocess import getoutput
+from subprocess import check_output
+
+
+os.environ['USER'] = "root"
+os.environ['HOST'] = "node1"
+os.environ['COMMAND'] = "uptime"
+
+USER = os.getenv('USER')
+HOST = os.getenv('HOST')
+COMMAND = os.getenv('COMMAND')
+
+cmd = 'ssh ' + " " + USER + "@" + HOST + " "+"-q" +" "+ COMMAND
+print(cmd)
+res = getoutput(cmd)
+#res = getoutput('lsblk;df -hT')
+print(res)
