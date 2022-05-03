@@ -1,0 +1,47 @@
+{
+  "name": "Access Weather Api",
+  "description": "Get Current  Weather",
+  "internalName": "access_weather_api",
+  "checkoutSource": false,
+  "Categories": "Access Weather Api",
+  "logo": "weather",
+  "inputs": [
+    {
+      "type": "text",
+      "formName": "CITY_NAME",
+      "valueType": "attribute",
+      "required": true,
+      "description": "Enter City Name",
+      "label": "City Name",
+      "value": [],
+      "defaultValue": [],
+      "useOutput": false
+    }
+  ],
+  "outputs": [
+    {
+      "name": "CURRENT_WEATHER_1",
+      "valueType": "attribute"
+    },
+    {
+      "name": "c2",
+      "valueType": "file",
+      "value": "/mnt/files/weather.txt"
+    },
+    {
+      "name": "c3",
+      "valueType": "configmap",
+      "value": "/mnt/outs/configmaps"
+    },
+    {
+      "name": "c4",
+      "valueType": "secret",
+      "value": "/mnt/outs/secrets"
+    },
+    {
+      "name": "c5",
+      "valueType": "directory",
+      "value": "/mnt/outs"
+    }
+  ]
+}
