@@ -1,0 +1,65 @@
+d={
+  "Instances": [
+    {
+      "insid": 25,
+      "insdetails": [
+        {
+          "insname": "arunvm1",
+          "insip": "192.168.100.1"
+        },
+      {
+          "insname": "arunvm2",
+          "insip": "192.168.100.2"
+        }
+      ]
+    }
+  ],
+  "DiskDetails":[
+    {
+      "diskid": 25,
+      "diskdetails": [
+        {
+          "dinsname": "arunvm1",
+          "dinsip": "192.168.100.1"
+        },
+      {
+          "dinsname": "arunvm2",
+          "dinsip": "192.168.100.2"
+        }
+      ]
+    }
+  ]
+}
+# #print(type(d))
+#
+# print(d['Instances'][0]['insdetails'][0]['insip'])
+# print(d.values())
+#print(d['DiskDetails'][0]['diskdetails'][1])
+
+t={
+    "glossary": {
+        "start": "tamil nadu",
+		"GlossDiv": {
+            "dc": "pudhukkattai",
+			"GlossList": {
+                "GlossEntry": {
+                    "ID": "614 805",
+					"SortAs": "kodivayal",
+					"GlossTerm": "Standard Generalized Markup Language",
+					"Acronym": "SGML",
+					"Abbrev": "ISO 8879:1986",
+					"GlossDef": {
+                        "para": "A meta-markup language, used to create markup languages such as DocBook.",
+						"GlossSeeAlso": ["GML", "XML"]
+                    },
+					"GlossSee": "markup"
+                }
+            }
+        }
+    }
+}
+
+# print(type(t))
+#
+print(t['glossary']['GlossDiv']['GlossList']['GlossEntry']['Acronym'])
+# print(t.keys())
